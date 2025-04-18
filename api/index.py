@@ -11,10 +11,10 @@ from pathlib import Path
 app = Flask(__name__)
 CORS(app)
 
-UPLOAD_FOLDER = 'results/images'
+UPLOAD_FOLDER = '../results/images'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-model = YOLO("best.pt")
+model = YOLO("../best.pt")
 
 def hitung_keparahan(jumlah):
     if jumlah <= 5:
