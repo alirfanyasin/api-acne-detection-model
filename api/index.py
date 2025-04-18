@@ -9,7 +9,7 @@ import shutil
 from pathlib import Path
 
 app = Flask(__name__)
-CORS(app)
+CORS(app,  origins=["https://frontend-acne-detection-web-zeta.vercel.app"])
 
 UPLOAD_FOLDER = '../results/images'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
