@@ -26,7 +26,7 @@ UPLOAD_FOLDER = os.path.join(STATIC_FOLDER, 'images')
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 # Load model YOLO
-model = YOLO("best.pt")  # Pastikan 'best.pt' disimpan di root project atau folder yang sesuai
+model = YOLO("../best.pt")  # Pastikan 'best.pt' disimpan di root project atau folder yang sesuai
 
 def hitung_keparahan(jumlah):
     if jumlah <= 5:
