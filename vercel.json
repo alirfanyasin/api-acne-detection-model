@@ -2,4 +2,28 @@
   "rewrites": [
     { "source": "/(.*)", "destination": "/api/index" }
   ]
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/index.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/predict",
+      "methods": ["POST", "OPTIONS"],
+      "dest": "api/index.py"
+    },
+    {
+      "src": "/results/images/(.*)",
+      "methods": ["GET"],
+      "dest": "api/index.py"
+    },
+    {
+      "src": "/(.*)",
+      "methods": ["GET"],
+      "dest": "api/index.py"
+    }
+  ]
 }
